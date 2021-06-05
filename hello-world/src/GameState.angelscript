@@ -43,6 +43,35 @@ class GameState : sef::BaseState
 
 		m_hudLayer.insertElement(@textElement);
 
+		// adiciona UIDrawable test
+		sef::FrameDrawable myFrame("ui-sprites/button-frame.png", vector2(32, 640));
+
+		sef::SpriteDrawable@ book = myFrame.setSprite("sprites/book.png");
+
+		sef::TextDrawable@ customText =
+			myFrame.setText("\n\n\n\nOi mundo!", sef::StaticFont("Verdana24_shadow.fnt"), sef::Color(0xFFFFFFFF), 1.0f);
+
+
+		sef::UIButton bookElement(
+			@myFrame,
+			vector2(0.9f, 0.5f),
+			null,
+			vector2(0.5f),
+			1.0f);
+
+		m_hudLayer.insertElement(@bookElement);
+
+		// Botão teste
+		sef::TextDrawable buttonText(sef::StaticFont("Verdana24_shadow.fnt"), "BOTÃO", 2.0f);
+
+		sef::UIButton customButton(
+			@buttonText,
+			vector2(0.0f, 1.0f),
+			null,
+			vector2(0.0f, 1.0f));
+
+		m_hudLayer.insertElement(@customButton);
+
 		// add back button
 		sef::UIButton backButton(
 			"sprites/back-button.png",
