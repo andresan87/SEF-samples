@@ -4,7 +4,7 @@ class CameraController : sef::GameController
 
 	CameraController()
 	{
-		@m_follower = sef::FollowerAsymptotic(GetCameraPos(), 0.015f, true /*dontPause*/);
+		@m_follower = sef::FollowerAsymptotic(GetCameraPos() /*initial position*/, 0.04f /*asymptoticBias*/, true /*dontPause*/);
 	}
 
 	void update() override
