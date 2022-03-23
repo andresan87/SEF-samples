@@ -4,7 +4,7 @@ class StartScreenLayer : sef::UISchedulerLayer
 	{
 		super("StartScreenLayer", true /*iterable*/, "start");
 
-		sef::parseLayerFileAndAddTo(GetResourceDirectory() + "layers/StartScreen.layer", this, sef::StaticFont());		
+		sef::parseLayerFileAndAddTo(GetResourceDirectory() + "layers/StartScreen.layer", this, sef::StaticFont());
 
 		LoadSoundEffect("soundfx/button.mp3");
 		LoadSoundEffect("soundfx/click.mp3");

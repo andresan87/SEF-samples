@@ -9,7 +9,7 @@ class FadeCurtain : sef::UILayer
 	private float m_elapsedTime = 0;
 	private float m_bias = 0.0f;
 
-	private string m_blankSprite = sef::options::frameworkPath + "SEF/media/sef-white.png";
+	private string m_blankSprite = sef::options::frameworkDirectoryPath + sef::options::frameworkDirectoryName + "media/sef-white.png";
 
 	private bool m_fadeIn = true;
 
